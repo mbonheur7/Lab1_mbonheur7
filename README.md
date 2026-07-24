@@ -62,7 +62,7 @@ exits instead of crashing.
 If `grades.csv` doesn't exist when the script runs, it prints an error and exits without
 making changes.
 
-## Typical Workflow
+## Workflow
 
 1. Add grade data to `grades.csv`.
 2. Run `python3 grade-evaluator.py` to check the results.
