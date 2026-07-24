@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/python3
 if [! -d "archive" ]; then
     mkdir archive
 fi
