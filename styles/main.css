@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+}
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    z-index: 1000;
+    background: #173b67;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+}
+.skip-link:focus {
+    top: 16px;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7fb;
+    color: #233047;
+}
+header {
+    background-color: #173b67;
+    color: white;
+    padding: 24px;
+    text-align: center;
+}
+nav {
+    background-color: #ffffff;
+    padding: 12px;
+    border-bottom: 1px solid #dbe3ed;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+nav a {
+    color: #173b67;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px;
+}
+main {
+    width: calc(100% - 48px);
+    max-width: 1500px;
+    margin: 32px auto;
+    display: grid;
+    gap: 28px;
+    background-color: white;
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid #dbe3ed;
+    box-shadow: 0 2px 8px rgba(23, 59, 103, 0.06);
+    box-sizing: border-box;
+}
+
+main > section {
+    min-width: 0;
+}
+
+main > section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#activities {
+    display: grid;
+    gap: 16px;
+}
+
+#activities h2 {
+    margin-bottom: 0;
+}
+
+main section h2 {
+    color: #173b67;
+    margin-top: 0;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 16px;
+    margin-bottom: 6px;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b8c5d6;
+    font: inherit;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b8c5d6;
+    font: inherit;
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b8c5d6;
+    font: inherit;
+}
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #2878c7;
+    outline-offset: 3px;
+}
+
+button {
+    background-color: #173b67;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 11px 16px;
+    margin-top: 16px;
+    font: inherit;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #24558d;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #526178;
+}
+:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+button:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+#dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+#dashboard > h2,
+#dashboard > p {
+    grid-column: 1 / -1;
+}
+#dashboard > div {
+    padding: 24px;
+    background-color: #eef4fb;
+    border-radius: 10px;
+    min-width: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #e0e9f4;
+}
+#dashboard > div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(23, 59, 103, 0.12);
+}
+#dashboard > div h3 {
+    margin-top: 0;
+    color: #173b67;
+}
+#activity-list {
+    margin-top: 20px;
+    display: grid;
+    gap: 12px;
+}
+
+#activity-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.form-group label {
+    display: block;
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #b8c7d9;
+    border-radius: 6px;
+    background-color: white;
+    color: #173b67;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+#activity-form button {
+    width: 100%;
+    min-height: 44px;
+    align-self: end;
+}
+
+/* Small mobile screens */
+@media (min-width: 360px) {
+    main {
+        padding: 24px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    #dashboard {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    #activity-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    #activity-form button {
+        width: 100%;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+}
+
+/* Desktop screens */
+@media (min-width: 1024px) {
+    main {
+        margin: 40px auto;
+        padding: 32px;
+    }
+
+    #activity-form {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto;
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+        transition-duration: 0.01ms;
+    }
+}

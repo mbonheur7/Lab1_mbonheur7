@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>campus life planer</title>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">
+        <p>skip to main content</p>
+    </a>
+    <header>
+        <h1>Campus life planner.</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#add">Add Activity</a></li>
+            <li><a href="#settings">Settings</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <section id="dashboard">
+            <h2>My dashboard</h2>
+            <p>Welcome, lets plan your day!</p>
+            <div>
+                <h3>Total activities</h3>
+                <p id="total-activites">0</p>
+            </div>
+            <div>
+                <h3>Total Planned Time.</h3>
+                <p id="total-minutes">0</p>
+            </div>
+            <div>
+                <h3>Most Used Tags.</h3>
+                <p id="top-tag">None Yet.</p>
+            </div>
+        </section>
+        <section id="activities">
+            <h2>Activities</h2>
+            <label for="activity-search">Search activities</label>
+            <input type="search" id="activity-search" placeholder="Search by title or tag.">
+            <label for="sort-activities">Sort activities</label>
+            <select name="" id="sort-activities">
+                <option value="date">Due date</option>
+                <option value="title">Title(A-Z)</option>
+                <option value="duration">Duration</option>
+            </select>
+            <div id="activity-list">
+                <p>No activities added yet!</p>
+            </div>
+        </section>
+        <section id="add">
+            <h2>Add Activity</h2>
+            <form id="activity-form">
+                
+                <div class="form-group">
+                    <label for="activity-title">Activity Title</label>
+                    <input type="text" id="activity-title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="activity-date">Date</label>
+                    <input type="date" id="activity-date" name="activity-date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="activity-duration">Estimated duration</label>
+                    <input type="number" id="activity-duration" name="activity-duration" min="0" step="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="activity-tag">Activity Tag</label>
+                    <select id="activity-tag" required>
+                            <option value="">choose a tag:</option>
+                            <option value="study">Study</option>
+                            <option value="assignment">Assignment</option>
+                            <option value="personal">Personal</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="duration-unit">Duration Unit</label>
+                    <select id="duration-unit">
+                        <option value="minutes">Minutes</option>
+                        <option value="hours">Hours</option>
+                    </select>
+                </div>
+
+                <button type="submit">Add activity.</button>
+                
+            </form>
+        </section>
+        <section id="settings">
+            <h2>Settings</h2>
+            <label for="time-target">Daily study time target(minutes)</label>
+            <input type="number" id="time-target" min="1" value="120">
+            <label for="activity-limit">Maximum number of activities.</label>
+            <input type="number" id="activity-limit" min="1" value="120">
+            <button type="button" id="export-data">Export activities</button>
+            <label for="import-date">Importing data as a JSON file</label>
+            <input type="file" id="import-data" accept=".json,application/json">
+            <p id="settings-status" aria-live="polite"></p>
+        </section>
+        <section id="about">
+            <h2>About campus life planner.</h2>
+            <p>Campus Life Planner helps students organize activities, manage deadlines, and track their planned study time.</p>
+            <h3>Contact</h3>
+            <p>
+                Github:
+                <a href="github.com/mbonheur7">
+                    visit my Github profie.
+                </a>
+            </p>
+            <p>
+                Email:
+                <a href="m.bonheur1@alustudent.com">
+                    Contact me
+                </a>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>Campus life Planner</p>
+    </footer>
+</body>
+</html>
